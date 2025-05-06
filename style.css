@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+#dogList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.frkLogo {
+
+    width: 200px;
+    height: auto;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dog-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.readMore_btn {
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: #407c7e;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+
+select,
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    appearance: none;
+}
+
+select {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5'%3E%3Cpath fill='gray' d='M0 0l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+
+    #searchInput,
+    #genderFilter {
+        display: inline-block;
+        width: auto;
+        margin-right: 10px;
+    }
+}
+
+
+/* Info-html styling */
+
+.info-header {
+    background-color: #407c7e;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.info-link {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #407c7e;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 2rem;
+    text-decoration: none;
+    border: 2px solid #407c7e;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.info-link:hover {
+    background-color: #407c7e;
+    color: #fff;
+}
+
+
+
+/* ===== Main Wrapper ===== */
+.info-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ===== Card Style Sections ===== */
+.info-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Headings ===== */
+.info-card h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #264653;
+}
+
+.info-card h2 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #407c7e;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: #2c2c2c;
+}
+
+/* ===== Text ===== */
+.info-card p {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* ===== Quote ===== */
+blockquote {
+    background: #eaf4f4;
+    border-left: 5px solid #407c7e;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .info-card {
+        padding: 20px;
+    }
+
+    .info-wrapper {
+        margin: 20px auto;
+    }
+
+    .info-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .info-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .info-card h3 {
+        font-size: 1.1rem;
+    }
+}
