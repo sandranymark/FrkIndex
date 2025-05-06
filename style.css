@@ -29,7 +29,7 @@ input {
 }
 
 .frkLogo {
-
+    cursor: pointer;
     width: 200px;
     height: auto;
     margin: auto;
