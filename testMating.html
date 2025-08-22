@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Provparning – Flatcoated Retriever</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <h1 class="header">Provparning</h1>
+    <a href="index.html" class="readMore_btn">⬅ Tillbaka till startsidan</a>
+
+    <section>
+        <h2>Välj tik</h2>
+        <input type="text" id="searchFemale" placeholder="Sök efter tik (namn eller regnr)">
+        <div id="femaleResult"></div>
+    </section>
+
+    <section>
+        <h2>Välj upp till 5 hanar</h2>
+        <input type="text" id="searchMale" placeholder="Sök efter hane (namn eller regnr)">
+        <div id="selectedMaleList"></div>
+        <div id="maleResults"></div>
+        <p id="selectedMalesInfo">Valda hanar: 0/5</p>
+    </section>
+
+    <button class="readMore_btn" id="calculateBtn">Skapa provparningar</button>
+
+    <section id="pairResults"></section>
+
+    <script src="testMating.js"></script>
+</body>
+
+</html>
