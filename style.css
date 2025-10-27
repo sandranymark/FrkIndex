@@ -163,9 +163,15 @@ select {
 .info-card {
     background-color: white;
     border-radius: 16px;
+    border: 1px solid #d6ebe9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease;
+}
+
+.info-card:nth-child(even) {
+    background-color: #eaf4f4;
 }
 
 .info-card:hover {
