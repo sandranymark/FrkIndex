@@ -3,28 +3,42 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Provparning – Flatcoated Retriever</title>
     <link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
-    <h1 class="header">Provparning</h1>
-    <a href="index.html" class="readMore_btn">⬅ Tillbaka till startsidan</a>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
 
-    <section>
+    <div class="menu-box">
+        <a href="index.html">Hem</a>
+        <a href="info.html">Info</a>
+        <a href="testMating.html">Provparning</a>
+    </div>
+
+    <h1 class="header">Provparning</h1>
+    <!-- <a href="index.html" class="readMore_btn">⬅ Tillbaka till startsidan</a> -->
+
+    <div class="input-section top">
         <h2>Välj tik</h2>
         <input type="text" id="searchFemale" placeholder="Sök efter tik (namn eller regnr)">
         <div id="femaleResult"></div>
-    </section>
+    </div>
 
-    <section>
+    <div>
         <h2>Välj upp till 5 hanar</h2>
         <input type="text" id="searchMale" placeholder="Sök efter hane (namn eller regnr)">
         <div id="selectedMaleList"></div>
         <div id="maleResults"></div>
         <p id="selectedMalesInfo">Valda hanar: 0/5</p>
-    </section>
+    </div>
 
     <button class="readMore_btn" id="calculateBtn">Skapa provparningar</button>
 

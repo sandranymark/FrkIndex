@@ -21,6 +21,16 @@ input {
     margin-bottom: 20px;
 }
 
+.info-hero {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    margin-top: 2rem;
+    border-radius: 8px;
+
+}
+
 
 #dogList {
     display: flex;
@@ -33,11 +43,16 @@ input {
     width: 200px;
     height: auto;
     margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
 
+
 .header {
+    color: #264653;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
+
 }
 
 .dog-card {
@@ -141,6 +156,7 @@ select {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    margin-top: 4rem;
 }
 
 /* ===== Card Style Sections ===== */
@@ -207,7 +223,8 @@ select {
 
 .readMore_btn {
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #407c7e;
     padding: 10px 20px;
     border-radius: 6px;
@@ -230,6 +247,15 @@ select {
 
 section {
     margin-bottom: 40px;
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+.input-section,
+.top {
+    margin-top: 40px;
 }
 
 input {
@@ -282,4 +308,96 @@ blockquote {
 
 .readMore_btn:hover {
     background-color: #365f60;
+}
+
+
+
+
+/* ===== Minimal hamburgermeny ===== */
+#menu-toggle {
+    display: none;
+}
+
+/* Knappen */
+.menu-button {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #407c7e;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-button span {
+    width: 24px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Öppna/close-animering */
+#menu-toggle:checked+.menu-button span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle:checked+.menu-button span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked+.menu-button span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Själva menyn */
+.menu-box {
+    position: fixed;
+    top: 65px;
+    right: 16px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+}
+
+/* Visa menyn */
+#menu-toggle:checked~.menu-box {
+    max-height: 200px;
+}
+
+.menu-box a {
+    padding: 12px 16px;
+    color: #407c7e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.menu-box a:hover {
+    background-color: #eaf4f4;
+}
+
+/* Mindre skärmar */
+@media (max-width: 600px) {
+    .menu-button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-box a {
+        padding: 10px 14px;
+    }
 }
